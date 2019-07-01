@@ -1,0 +1,81 @@
+.product {
+    display: flex;
+    position: relative;
+
+    .product_store {
+        display: flex;
+        align-items: center;
+        background: #ffffff;
+        z-index: 1;
+        margin: 10px 0;
+
+        img {
+            width: 160px;
+            height: 160px;
+            border-radius: 10px;
+            margin: 20px;
+        }
+
+        .product_check {
+            width: 40px;
+            height: 40px;
+            background: url('http://localhost:3000/img/check.png') center center no-repeat;
+            background-size: 40px 40px;
+        }
+
+        .product_checked {
+            background: url('http://localhost:3000/img/checked.png') center center no-repeat;
+        }
+
+        .product_property {
+            flex: 2;
+
+            .product_name {
+                display: flex;
+            }
+
+            .product_size {
+                margin-top: 10px;
+
+                span {
+                    background: #f4f4f4;
+                    color: #999999;
+                }
+            }
+
+            .product_footer {
+                display: flex;
+                align-items: center;
+                margin-top: 20px;
+                justify-content: space-between;
+
+                .product_price {
+                    font-weight: bold;
+                    color: #ff0000;
+                }
+
+                .product_count {
+                    input {
+                        border-top: 1px solid #f4f4f4;
+                        border-bottom: 1px solid #f4f4f4;
+                        width: 80px;
+                        padding: 4px 0;
+                        text-align: center;
+                    }
+
+                    span {
+                        border: 1px solid #f4f4f4;
+                        padding: 4px 20px;
+                        border-top-left-radius: 6px;
+                        border-bottom-left-radius: 6px;
+                    }
+
+                    span+span {
+                        border-top-right-radius: 6px;
+                        border-bottom-right-radius: 6px;
+                    }
+                }
+            }
+        }
+    }
+}

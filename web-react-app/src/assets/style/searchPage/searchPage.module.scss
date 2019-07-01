@@ -1,0 +1,60 @@
+.search_page {
+    font-size: 24px;
+    height: 100%;
+    width: 100%;
+    background: #ffffff;
+
+    .search {
+        height: 100px;
+        width: 100%;
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        :global {
+            .iconfont {
+                position: absolute;
+                top: 36px;
+                left: 60px;
+            }
+        }
+
+        input {
+            border: 1px solid #ebebeb;
+            width: 80%;
+            height: 60px;
+            border-radius: 30px;
+            background: #eeeeee;
+            text-indent: 70px;
+            margin-left: 5%;
+        }
+
+        .cancel {
+            padding: 20px;
+            cursor: pointer;
+        }
+    }
+
+    .search_content {
+        padding: 20px 5%;
+        width: 90%;
+
+        .search_content_tit {
+            font-size: 32px;
+            margin-bottom: 40px;
+        }
+
+        .search_content_tag {
+            ul {
+                display: flex;
+                flex-wrap: wrap;
+
+                li {
+                    background: #eeeeee;
+                    padding: 10px 20px;
+                    margin: 10px;
+                }
+            }
+        }
+    }
+}

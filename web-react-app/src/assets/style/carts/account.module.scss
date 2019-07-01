@@ -1,0 +1,54 @@
+.account {
+    background: #ffffff;
+    position: fixed;
+    bottom: 93px;
+    width: 94%;
+    height: 110px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 3%;
+    align-items: center;
+    z-index: 99;
+
+    .check_box {
+        display: flex;
+        align-items: center;
+
+        .all_check {
+            margin-right: 10px;
+            width: 40px;
+            height: 40px;
+            background: url('http://localhost:3000/img/check.png') center center no-repeat;
+            background-size: 40px 40px;
+        }
+
+        .all_checked {
+            background: url('http://localhost:3000/img/checked.png') center center no-repeat;
+        }
+    }
+
+    .cart_count {
+        display: flex;
+        align-items: center;
+        font-size: 32px;
+        margin-right: 10px;
+
+        div {
+            text-align: center;
+            line-height: 32px;
+        }
+
+        .count_color {
+            color: darkred;
+        }
+
+        .total {
+            line-height: 32px;
+            background: darkred;
+            margin-left: 40px;
+            padding: 20px 32px;
+            border-radius: 50px;
+            color: #ffffff;
+        }
+    }
+}

@@ -1,0 +1,46 @@
+{
+  "user": {
+    "no": 1
+  },
+  "shops": [
+    {
+      "checked": true,
+      "degree": 1,
+      "shopName": "孔夫子新书广场",
+      "totalPrice": 0,
+      "products": [
+        {
+          "checked": true,
+          "title": "董启章签名《衣魚簡史：董啟章中短篇小說集Ⅱ》（台版）",
+          "price": 128.56,
+          "num": 1,
+          "pic": "../../../static/img/cart/p-1.jpg"
+        },
+        {
+          "checked": true,
+          "title": "签名《漫说文化丛书》毛边本（全十册）特别订制礼盒 附赠藏书票，附送纪念签章卡",
+          "price": 423.87,
+          "num": 1,
+          "pic": "../../../static/img/cart/p-2.jpg"
+        }
+      ]
+    },
+    {
+      "checked": true,
+      "degree": 1,
+      "shopName": "通雅轩",
+      "totalPrice": 0,
+      "products": [
+        {
+          "checked": true,
+          "title": "时代漫画（16开函装 全39册 珍藏本 限量发行500套 带收藏证 详见描述）",
+          "price": 840,
+          "num": 1,
+          "pic": "../../../static/img/cart/p-3.jpg"
+        }
+      ]
+    }
+  ],
+  "totalPrice": 0,
+  "checked": true
+}

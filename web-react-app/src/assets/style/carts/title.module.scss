@@ -1,0 +1,29 @@
+.header {
+    height: 88px;
+    position: fixed;
+    top: 0;
+    width: 94%;
+    padding: 0 3%;
+    line-height: 88px;
+    background: #ffffff;
+    z-index: 9999;
+
+    .title_box {
+        position: relative;
+
+        .box1 {
+            text-align: center;
+            width: 60%;
+            margin: 0 auto;
+        }
+
+        .box2 {
+            width: 20%;
+            display: inline;
+            position: absolute;
+            top: 0;
+            right: -40px;
+            text-align: center;
+        }
+    }
+}

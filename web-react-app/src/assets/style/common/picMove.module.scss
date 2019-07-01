@@ -1,0 +1,31 @@
+.pic_move {
+    width: 100%;
+    height: 100%;
+
+    // 修改全局类样式，并且因为最外层是模板root的类限制，所以修改后的全局样式只会在当前模板生效
+    :global {
+        .swiper-container {
+            width: 100%;
+            height: 100%;
+
+            .swiper-pagination-bullet {
+                opacity: 0.6;
+                width: 14px;
+                height: 14px;
+                background: #ffffff !important;
+            }
+
+            .swiper-pagination-bullet-active {
+                opacity: 1;
+                width: 16px;
+                height: 16px;
+                background: red !important;
+            }
+        }
+    }
+
+    .pic {
+        width: 100%;
+        height: 100%;
+    }
+}

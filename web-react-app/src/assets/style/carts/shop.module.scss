@@ -1,0 +1,26 @@
+.shop {
+    width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 10px;
+
+    .shop_tit {
+        display: flex;
+    }
+
+    .shop_name {
+        margin-left: 20px;
+    }
+
+    .shop_check {
+        width: 40px;
+        height: 40px;
+        background: url('http://localhost:3000/img/check.png') center center no-repeat;
+        background-size: 40px 40px;
+    }
+
+    .shop_checked {
+        background: url('http://localhost:3000/img/checked.png') center center no-repeat;
+    }
+}

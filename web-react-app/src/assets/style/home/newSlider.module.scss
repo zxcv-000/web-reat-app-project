@@ -1,0 +1,46 @@
+.index_slider {
+    background: #ffffff;
+    padding: 10px 0 30px 0;
+    margin-top: 40px;
+
+    .slider_tit {
+        font-size: 24px;
+        text-align: center;
+        margin: 40px 0 40px 0;
+    }
+
+    :global {
+        .swiper-slide {
+            width: 250px;
+        }
+    }
+
+    .slider_item {
+        overflow: hidden;
+        font-size: 24px;
+        text-align: center;
+
+        .slider_item_tit {
+            margin: 10px 0;
+        }
+
+        .img_box {
+            width: 250px;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        img {
+            max-height: 100%;
+            max-width: 100%;
+        }
+
+        .slider_item_price {
+            color: red;
+        }
+    }
+
+}

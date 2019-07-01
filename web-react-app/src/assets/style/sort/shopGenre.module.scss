@@ -1,0 +1,18 @@
+.shop_genre {
+    width: 20%;
+
+    ul {
+        li {
+            font-size: 24px;
+            margin: 40px auto;
+            text-align: center;
+            padding: 4px 0;
+        }
+
+        .li_active {
+            color: #a32445;
+            font-weight: bold;
+            border-right: 6px solid #a32445;
+        }
+    }
+}

@@ -1,0 +1,35 @@
+.minure_genre {
+    flex: 1;
+    padding: 40px 40px 120px 40px;
+
+    .content {
+        text-align: center;
+
+        .content_tit {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .content_item {
+            display: flex;
+            margin-top: 40px;
+            flex-wrap: wrap;
+
+            .content_list {
+                width: 33.333333%;
+                margin: 10px 0;
+
+                .content_list_img {
+                    img {
+                        width: 120px;
+                        height: 120px;
+                    }
+                }
+
+                .content_list_name {
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+}
