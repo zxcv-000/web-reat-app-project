@@ -10,11 +10,11 @@ const cartInfo = (req, res) => {
             state: true,
             resolveData
         })
-    }
+    };
     let rejectCb = () => {
         res.statusCode = 401;
         res.end()
-    }
+    };
 
     token.tokenVerify(res, tokenData, 'vip', resolveCb, rejectCb, resolveData)
 

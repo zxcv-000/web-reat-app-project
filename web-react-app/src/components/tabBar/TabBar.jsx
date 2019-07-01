@@ -1,6 +1,6 @@
 import React from "react"
 import style from '../../assets/style/tabBar/tabBar.module.scss'
-import { OwnNavLink } from '../../utils/MyLink'
+import {OwnNavLink} from '../../utils/MyLink'
 
 class TabBar extends React.Component {
     constructor(props) {
@@ -17,7 +17,7 @@ class TabBar extends React.Component {
                         <div className={style.foot_tit}>首页</div>
                     </div>
                 </OwnNavLink>
-                <OwnNavLink className="sort" activeClassName={style.active} to='/sort/clothes' tag='div'>
+                <OwnNavLink className="sort" activeClassName={style.active} to='/sort/nvClothes' tag='div'>
                     <div className={style.tab_box}>
                         <div><span className="iconfont icon-sort"></span></div>
                         <div className={style.foot_tit}>分类</div>

@@ -5,7 +5,7 @@ const createToken = (tokenInfo, secret) => {
     return jwt.sign(tokenInfo, secret, {
         expiresIn: 60 * 60
     });
-}
+};
 
 //验证token是否正确
 const tokenVerify = (res, token, secret, resolveCb, rejectCb, resolveData) => {
@@ -16,10 +16,10 @@ const tokenVerify = (res, token, secret, resolveCb, rejectCb, resolveData) => {
             resolveCb(resolveData);
         }
     });
-}
+};
 
 
 module.exports = {
     createToken,
     tokenVerify
-}
+};
