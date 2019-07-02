@@ -9,19 +9,33 @@ class MinuteGenre extends React.Component {
             data: []
         }
     }
-
     componentWillMount() {
-        console.log(this.props.match.url)
         $axios({
             method: "get",
             url: this.props.match.url
-        }).then(({data}) => {
+        }).then(({ data }) => {
             this.setState({
                 data: data.resolveData
             });
         }).catch(error => {
             console.log(error)
         })
+    }
+
+    // 使用componentWillReceiveProps发送请求，首次reader渲染不会调用componentWillReceiveProps。
+    componentWillReceiveProps(nextProps) {
+        if (nextProps.match.url !== this.props.match.url) {
+            $axios({
+                method: "get",
+                url: nextProps.match.url
+            }).then(({ data }) => {
+                this.setState({
+                    data: data.resolveData
+                });
+            }).catch(error => {
+                console.log(error)
+            })
+        }
     }
 
     render() {
@@ -35,7 +49,7 @@ class MinuteGenre extends React.Component {
                                 return (
                                     <div className={style.content_list} key={index}>
                                         <div className={style.content_list_img}>
-                                            <img src={item.url} alt=""/>
+                                            <img src={item.url} alt="" />
                                         </div>
                                         <div className={style.content_list_name}>{item.title}</div>
                                     </div>

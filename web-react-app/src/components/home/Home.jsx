@@ -56,11 +56,13 @@ class Home extends React.Component {
         return (
             <div className={style.home}>
                 <div className={style.banner}>
-                    <PicMove mountPoint='home-swiper' img_url={this.state.img_url}/>
+                    <PicMove mountPoint='home-swiper' img_url={this.state.img_url} />
                 </div>
-                <Navigation/>
-                <NewSlider mountPoint='slider_swiper' data={this.state.new_slider_data}/>
-                <Theme data={this.state.theme_data}/>
+                <Navigation />
+                <NewSlider mountPoint='slider_swiper' data={this.state.new_slider_data} />
+                <Theme data={this.state.theme_data} />
+
+                <div>商品详情</div>
             </div>
         )
     }

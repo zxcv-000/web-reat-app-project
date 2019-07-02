@@ -6,6 +6,7 @@ import PersonalCenter from '../components/personalCenter/PersonalCenter'
 import Register from '../components/authentication/register'
 import Login from '../components/authentication/Login'
 import MinuteGenre from '../components/sort/MinuteGenre'
+import Details from '../components/details/Details'
 
 const routes = [
     {
@@ -33,6 +34,10 @@ const routes = [
     }, {
         path: '/personalCenter',
         component: PersonalCenter,
+        exact: true
+    }, {
+        path: '/details/:id',
+        component: Details,
         exact: true
     }, {
         path: '/register',
