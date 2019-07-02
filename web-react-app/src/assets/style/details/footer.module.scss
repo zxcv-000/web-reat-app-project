@@ -1,0 +1,42 @@
+.footer {
+  position: fixed;
+  background: #ffffff;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  bottom: 0;
+
+  .detail_icon {
+    display: flex;
+    flex: 1;
+    padding: 0 15px;
+    justify-content: space-around;
+    align-items: center;
+
+    .detail_index {
+      color: #000000;
+      text-align: center;
+    }
+  }
+
+  .detail_group {
+    display: flex;
+    align-items: center;
+
+    .detail_add {
+      background: #999999;
+      color: #ffffff;
+      height: 100px;
+      line-height: 100px;
+      padding: 0 40px;
+    }
+
+    .detail_buy {
+      background: darkred;
+      color: #ffffff;
+      height: 100px;
+      line-height: 100px;
+      padding: 0 60px;
+    }
+  }
+}
