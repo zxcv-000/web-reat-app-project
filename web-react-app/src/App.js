@@ -31,8 +31,6 @@ class App extends React.Component {
                 }
                 <TabBar />
             </Router>
-
-
         )
     }
 }

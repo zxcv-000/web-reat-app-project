@@ -1,90 +1,90 @@
 .details {
-  font-size: 24px;
+    font-size: 24px;
 
-  .title {
-    background: #ffffff;
-    text-align: center;
-    height: 90px;
-    line-height: 90px;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 10;
-  }
-
-  .banner {
-    margin-top: 90px;
-    height: 750px;
-    overflow: hidden;
-  }
-
-  .main {
-    background: #ffffff;
-
-    .product_info {
-      .product_name {
-        font-size: 30px;
-        width: 94%;
-        padding: 10px 3% 30px;
-      }
-
-      .product_price {
-        font-size: 38px;
-        width: 94%;
-        padding: 20px 3% 20px 3%;
-        color: red;
-      }
+    .back_icon {
+        z-index: 999;
+        position: fixed;
+        top: 18px;
+        width: 62px;
+        height: 62px;
+        left: 18px;
+        background: url("http://localhost:3000/img/back-font.png") no-repeat 50%;
+        background-size: 100%;
     }
 
-    .details_next {
-      display: flex;
-      background: #Fff;
-      border-top: 1px dashed #eaeaea;
-      border-bottom: 1px dashed #eaeaea;
+    .banner {
+        height: 750px;
+        overflow: hidden;
+    }
 
-      .next_list {
-        color: #9a9a9a;
-        flex: 1;
-        text-align: center;
-        display: flex;
-        height: 100px;
-        align-items: center;
-        justify-content: center;
+    .main {
+        background: #ffffff;
+        margin-bottom: 150px;
 
-        .red_circle {
-          width: 20px;
-          height: 20px;
-          margin-right: 4px;
-          border-radius: 20px;
-          background: darkred;
+        .product_info {
+            .product_name {
+                font-size: 30px;
+                width: 94%;
+                padding: 10px 3% 30px;
+            }
+
+            .product_price {
+                font-size: 38px;
+                width: 94%;
+                padding: 20px 3% 20px 3%;
+                color: red;
+            }
         }
-      }
-    }
 
-    .details_content {
-      width: 100%;
-
-      .details_tab {
-        ul {
-          display: flex;
-
-          li {
+        .details_next {
             display: flex;
-            flex: 1;
-            height: 90px;
-            align-items: center;
-            justify-content: center;
-            font-size: 28px;
-            color: #000;
-            border-bottom: 1px dashed #eaeaea;
-          }
+            background: #Fff;
+            border-top: 2px dashed #eaeaea;
+            border-bottom: 2px dashed #eaeaea;
 
-          .li_active {
-            color: darkred !important;
-            font-weight: bold;
-          }
+            .next_list {
+                color: #9a9a9a;
+                flex: 1;
+                text-align: center;
+                display: flex;
+                height: 100px;
+                align-items: center;
+                justify-content: center;
+
+                .red_circle {
+                    width: 20px;
+                    height: 20px;
+                    margin-right: 4px;
+                    border-radius: 20px;
+                    background: darkred;
+                }
+            }
         }
-      }
+
+        .details_content {
+            width: 100%;
+
+            .details_tab {
+                ul {
+                    display: flex;
+
+                    li {
+                        display: flex;
+                        flex: 1;
+                        height: 90px;
+                        align-items: center;
+                        justify-content: center;
+                        font-size: 28px;
+                        color: #000;
+                        border-bottom: 2px dashed #eaeaea;
+                    }
+
+                    .li_active {
+                        color: darkred !important;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
     }
-  }
 }

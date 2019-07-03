@@ -62,9 +62,13 @@ class Home extends React.Component {
                 <NewSlider mountPoint='slider_swiper' data={this.state.new_slider_data} />
                 <Theme data={this.state.theme_data} />
 
-                <div>商品详情</div>
+                <div onClick={() => this.go()}>商品详情</div>
             </div>
         )
+    }
+
+    go = () => {
+        this.props.history.push('/details/1')
     }
 }
 

@@ -11,9 +11,10 @@ class Describe extends React.Component {
     render() {
         return (
             <div className={style.describe}>
-                <img src="" alt=""/>
-                <img src="" alt=""/>
-                <img src="" alt=""/>
+                <img src='../../../img/good1.jpg' alt="" />
+                <img src='../../../img/good2.jpg' alt="" />
+                <img src='../../../img/good3.jpg' alt="" />
+                <img src='../../../img/good4.jpg' alt="" />
             </div>
         )
     }

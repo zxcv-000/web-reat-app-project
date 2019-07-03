@@ -2,6 +2,8 @@ import React from "react"
 import style from '../../assets/style/details/details.module.scss'
 import PicMove from '../common/PicMove'
 import Footer from './Footer'
+import { OwnNavLink } from '../../utils/MyLink'
+import { Route } from 'react-router-dom'
 
 class Details extends React.Component {
     constructor(props) {
@@ -17,17 +19,20 @@ class Details extends React.Component {
         }
     }
 
+    back = () => {
+        this.props.history.goBack();
+    }
     render() {
         return (
             <div className={style.details}>
-                <div className={style.title}>商品详情</div>
+                <div className={style.back_icon} onClick={() => this.back()}></div>
                 <div className={style.banner}>
-                    <PicMove mountPoint='details_banner' img_url={this.state.img_url}/>
+                    <PicMove mountPoint='details_banner' img_url={this.state.img_url} />
                 </div>
                 <div className={style.main}>
                     <div className={style.product_info}>
                         <div className={style.product_price}>￥300</div>
-                        <div className={style.product_name}>2019年春季新款女装流苏复古长 仙女蕾丝中长款公主裙子 连衣袖</div>
+                        <div className={style.product_name}>2019年春季新款女装流苏复古 仙女蕾丝中长款公主裙</div>
                     </div>
                     <div className={style.details_next}>
                         <div className={style.next_list}>
@@ -46,14 +51,23 @@ class Details extends React.Component {
                     <div className={style.details_content}>
                         <div className={style.details_tab}>
                             <ul>
-                                <li> 商品详情</li>
-                                <li> 商品规格</li>
-                                <li> 售后说明</li>
+                                <OwnNavLink activeClassName='li_active' to='/details/1/describe' tag='li'> 商品详情</OwnNavLink>
+                                <OwnNavLink activeClassName='li_active' to='/details/1/specs' tag='li'> 商品规格</OwnNavLink>
+                                <OwnNavLink activeClassName='li_active' to='/details/1/explain' tag='li'> 售后说明</OwnNavLink>
                             </ul>
+                            {
+                                this.props.routes && this.props.routes.map((route, index) => {
+                                    if (route.exact) {
+                                        return <Route exact key={index} path={this.props.match.path + route.path} component={route.component} />
+                                    } else {
+                                        return <Route key={index} path={this.props.match.path + route.path} component={route.component} />
+                                    }
+                                })
+                            }
                         </div>
                     </div>
                 </div>
-                <Footer/>
+                <Footer />
             </div>
         )
     }

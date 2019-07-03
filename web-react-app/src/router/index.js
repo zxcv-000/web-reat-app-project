@@ -7,6 +7,11 @@ import Register from '../components/authentication/register'
 import Login from '../components/authentication/Login'
 import MinuteGenre from '../components/sort/MinuteGenre'
 import Details from '../components/details/Details'
+import Describe from '../components/details/Describe'
+import Explain from '../components/details/Explain'
+import Specs from '../components/details/Specs'
+
+
 
 const routes = [
     {
@@ -38,7 +43,21 @@ const routes = [
     }, {
         path: '/details/:id',
         component: Details,
-        exact: true
+        routes: [
+            {
+                path: '/describe',
+                component: Describe,
+                exact: true,
+            }, {
+                path: '/explain',
+                component: Explain,
+                exact: true,
+            }, {
+                path: '/specs',
+                component: Specs,
+                exact: true,
+            },
+        ]
     }, {
         path: '/register',
         component: Register,
