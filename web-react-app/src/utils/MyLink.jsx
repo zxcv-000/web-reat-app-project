@@ -8,7 +8,9 @@ const OwnLinkItem = (props) => {
     let _activeClassName = props.activeClassName || 'active';
     let isActive = props.toObj ? props.location.pathname === props.to.pathname : props.location.pathname.startsWith(props.to);
     let className = (props.nav && isActive) ? _class + ' ' + _activeClassName : _class;
-    return <Tag className={className} onClick={() => props.history.push(props.to)}> {props.children} </Tag>
+    return <Tag className={className} onClick={() => {
+        props.traceless ? props.history.replace(props.to) : props.history.push(props.to)
+    }}> {props.children} </Tag>
 };
 
 

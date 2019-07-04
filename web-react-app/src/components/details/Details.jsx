@@ -2,8 +2,7 @@ import React from "react"
 import style from '../../assets/style/details/details.module.scss'
 import PicMove from '../common/PicMove'
 import Footer from './Footer'
-import { OwnNavLink } from '../../utils/MyLink'
-import { Route } from 'react-router-dom'
+import {OwnNavLink} from '../../utils/MyLink'
 
 class Details extends React.Component {
     constructor(props) {
@@ -21,13 +20,14 @@ class Details extends React.Component {
 
     back = () => {
         this.props.history.goBack();
-    }
+    };
+
     render() {
         return (
             <div className={style.details}>
                 <div className={style.back_icon} onClick={() => this.back()}></div>
                 <div className={style.banner}>
-                    <PicMove mountPoint='details_banner' img_url={this.state.img_url} />
+                    <PicMove mountPoint='details_banner' img_url={this.state.img_url}/>
                 </div>
                 <div className={style.main}>
                     <div className={style.product_info}>
@@ -51,23 +51,31 @@ class Details extends React.Component {
                     <div className={style.details_content}>
                         <div className={style.details_tab}>
                             <ul>
-                                <OwnNavLink activeClassName='li_active' to='/details/1/describe' tag='li'> 商品详情</OwnNavLink>
-                                <OwnNavLink activeClassName='li_active' to='/details/1/specs' tag='li'> 商品规格</OwnNavLink>
-                                <OwnNavLink activeClassName='li_active' to='/details/1/explain' tag='li'> 售后说明</OwnNavLink>
+                                <OwnNavLink activeClassName='li_active' to='/details/1/describe' tag='li'
+                                            traceless> 商品详情</OwnNavLink>
+                                <OwnNavLink activeClassName='li_active' to='/details/1/specs' tag='li'
+                                            traceless> 商品规格</OwnNavLink>
+                                <OwnNavLink activeClassName='li_active' to='/details/1/explain' tag='li'
+                                            traceless> 售后说明</OwnNavLink>
                             </ul>
                             {
-                                this.props.routes && this.props.routes.map((route, index) => {
-                                    if (route.exact) {
-                                        return <Route exact key={index} path={this.props.match.path + route.path} component={route.component} />
-                                    } else {
-                                        return <Route key={index} path={this.props.match.path + route.path} component={route.component} />
-                                    }
-                                })
+                                this.props.renderRoutesMap(this.props.routes)
                             }
+                            {/*{*/}
+                            {/*this.props.routes && this.props.routes.map((route, index) => {*/}
+                            {/*if (route.exact) {*/}
+                            {/*return <Route exact key={index} path={this.props.match.path + route.path}*/}
+                            {/*component={route.component}/>*/}
+                            {/*} else {*/}
+                            {/*return <Route key={index} path={this.props.match.path + route.path}*/}
+                            {/*component={route.component}/>*/}
+                            {/*}*/}
+                            {/*})*/}
+                            {/*}*/}
                         </div>
                     </div>
                 </div>
-                <Footer />
+                <Footer/>
             </div>
         )
     }

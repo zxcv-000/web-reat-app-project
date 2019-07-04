@@ -1,6 +1,6 @@
 import React from "react"
 import style from '../../assets/style/tabBar/tabBar.module.scss'
-import { OwnNavLink } from '../../utils/MyLink'
+import {OwnNavLink} from '../../utils/MyLink'
 
 class TabBar extends React.Component {
     constructor(props) {
