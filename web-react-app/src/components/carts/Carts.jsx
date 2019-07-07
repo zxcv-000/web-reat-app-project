@@ -15,7 +15,7 @@ class Carts extends React.Component {
                 <Title />
                 <div className={style.cart_content}>
                     <Shop />
-                    <Account/>
+                    <Account />
                 </div>
             </div>
         )
