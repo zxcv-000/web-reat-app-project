@@ -4,7 +4,9 @@ const cartsReducer = (state = {}, action) => {
             return {
                 ...state, cartInfo: action.payload
             };
-        default :
+        default:
             return state
     }
 };
+
+export default cartsReducer;

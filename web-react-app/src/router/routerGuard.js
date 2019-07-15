@@ -1,9 +1,9 @@
-import React, {Component} from 'react'
-import {withRouter} from 'react-router-dom'
+import React, { Component } from 'react'
+import { withRouter } from 'react-router-dom'
 import Loadable from 'react-loadable'
 import renderRoutesMap from './renderRoutesMap'
-
-import TabBar from '../components/tabBar/TabBar'
+import { connect } from 'react-redux'
+import { change } from '../store/actions/flagAction'
 
 class RouterGuard extends Component {
     constructor(props) {
@@ -12,13 +12,11 @@ class RouterGuard extends Component {
     }
 
     componentWillMount() {
-        let {history: {replace}, location} = this.props;
-        console.log(this.props)
-
+        // let { history: { replace }, location } = this.props;
     }
 
     render() {
-        let {component, routes = []} = this.props;
+        let { component, routes = [] } = this.props;
 
         const LoadableComponent = Loadable({
             loader: () => import(`../components/${component}.jsx`),
@@ -27,20 +25,16 @@ class RouterGuard extends Component {
             ),
             delay: 0
         });
-        if(this.props.aa){
+        this.props.change(this.props.flag)
         return (
-            <>
-                <LoadableComponent {...this.props} renderRoutesMap={renderRoutesMap} routes={routes}/>
-                <TabBar/>
-            </>
-        )}else{
-            return (
-                <>
-                    <LoadableComponent {...this.props} renderRoutesMap={renderRoutesMap} routes={routes}/>
-                </>
-            )
-        }
+            <LoadableComponent {...this.props} renderRoutesMap={renderRoutesMap} routes={routes} />
+        )
     }
 }
 
-export default withRouter(RouterGuard)
+const mapDispatchToProps = dispatch => ({
+    change: (flag) => dispatch(change(flag))
+});
+
+
+export default withRouter(connect(null, mapDispatchToProps)(RouterGuard))

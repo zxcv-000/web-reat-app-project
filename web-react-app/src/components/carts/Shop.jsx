@@ -20,7 +20,6 @@ class Shop extends React.Component {
             </div>
         )
     }
-
 }
 
 export default Shop;

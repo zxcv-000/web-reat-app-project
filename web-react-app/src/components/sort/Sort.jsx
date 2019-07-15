@@ -1,5 +1,4 @@
 import React from "react";
-import {Route} from "react-router-dom";
 import style from '../../assets/style/sort/sort.module.scss'
 import SearchBox from '../common/SearchBox'
 import ShopGenre from './ShopGenre'
@@ -14,9 +13,13 @@ class Sort extends React.Component {
     render() {
         return (
             <div className={style.sort}>
-                <SearchBox history={this.props.history}/>
+                <SearchBox history={this.props.history} />
                 <div className={style.sort_content}>
-                    <ShopGenre/>
+                    <ShopGenre />
+                    {
+                        this.props.renderRoutesMap(this.props.routes)
+                    }
+
                     {
                         // console.log(this.props)
                     }

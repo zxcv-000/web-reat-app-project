@@ -16,15 +16,18 @@ const routes = [
     {
         path: '/home',
         component: 'home/Home',
-        exact: true
+        exact: true,
+        flag: true
     }, {
         path: '/sort',
         component: 'sort/Sort',
+        flag: true,
         routes: [
             {
                 path: '/sort/:type',
                 component: 'sort/MinuteGenre',
-                exact: true
+                exact: true,
+                flag: true
             }
         ]
     }, {
@@ -34,11 +37,13 @@ const routes = [
     }, {
         path: '/carts',
         component: 'carts/Carts',
-        exact: true
+        exact: true,
+        flag: true
     }, {
         path: '/personalCenter',
         component: 'personalCenter/PersonalCenter',
-        exact: true
+        exact: true,
+        flag: true
     }, {
         path: '/details/:id',
         component: 'details/Details',
@@ -69,7 +74,7 @@ const routes = [
         path: '/',
         component: 'home/Home',
         exact: true,
-        aa:true
+        flag: true
     },
 ];
 

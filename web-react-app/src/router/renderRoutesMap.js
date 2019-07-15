@@ -1,30 +1,21 @@
 import React from 'react'
 import RouterGuard from './routerGuard'
-import {Route} from 'react-router-dom'
+import { Route } from 'react-router-dom'
+
 
 const renderRoutesMap = (routes) => (
     routes.map((route, index) => {
         if (route.exact) {
-            if(route.aa){
-                return (
-                    <Route exact  key={index} path={route.path} render={props => (
-                        <RouterGuard {...route} {...props} aa/>
-                    )}
-                    />
-                )
-            }else{
-                return (
-                    <Route exact key={index} path={route.path} render={props => (
-                        <RouterGuard {...route} {...props} />
-                    )}
-                    />
-                )
-            }
-
+            return (
+                <Route exact key={index} path={route.path} render={props => (
+                    <RouterGuard {...route} {...props} flag={Boolean(route.flag)} />
+                )}
+                />
+            )
         } else {
             return (
                 <Route key={index} path={route.path} render={props => (
-                    <RouterGuard {...route} {...props} />
+                    <RouterGuard {...route} {...props} flag={Boolean(route.flag)} />
                 )}
                 />
             )
@@ -32,4 +23,5 @@ const renderRoutesMap = (routes) => (
     })
 );
 
-export default renderRoutesMap
+
+export default renderRoutesMap;

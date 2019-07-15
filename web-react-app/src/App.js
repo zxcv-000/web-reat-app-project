@@ -1,5 +1,8 @@
 import React from 'react';
 import router from './router'
+import TabBar from './components/tabBar/TabBar'
+import { connect } from 'react-redux'
+import { BrowserRouter as Router } from "react-router-dom"
 
 class App extends React.Component {
     constructor(props) {
@@ -8,9 +11,22 @@ class App extends React.Component {
     }
 
     render() {
-        return router()
+        return (
+            <>
+                <Router>
+                    {router()}
+                    {this.props.flag ? <TabBar /> : ''}
+                </Router>
+            </>
+        )
     }
 }
 
 
-export default App;
+const mapStateToProps = (state) => {
+    return {
+        flag: state.flagReducer.flag
+    }
+};
+
+export default connect(mapStateToProps, null)(App);

@@ -1,6 +1,6 @@
 import React from 'react'
 import renderRoutesMap from './renderRoutesMap'
-import {BrowserRouter as Router, Switch} from "react-router-dom";
+import { Switch } from "react-router-dom";
 
 /**
  * renderRoutes 渲染路由
@@ -8,12 +8,10 @@ import {BrowserRouter as Router, Switch} from "react-router-dom";
  * @param  {object}     extraProps  = {}    extra的属性
  * @param  {object}     switchProps = {}    switch的属性
  */
-const renderRoutes = ({routes, extraProps = {}, switchProps = {}}) => (
-    <Router>
-        <Switch {...switchProps}>
-            {renderRoutesMap(routes)}
-        </Switch>
-    </Router>
+const renderRoutes = ({ routes, extraProps = {}, switchProps = {} }) => (
+    <Switch {...switchProps}>
+        {renderRoutesMap(routes)}
+    </Switch>
 );
 
 export default renderRoutes

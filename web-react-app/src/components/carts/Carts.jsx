@@ -3,12 +3,19 @@ import style from '../../assets/style/carts/carts.module.scss'
 import Title from './Title'
 import Shop from './Shop'
 import Account from './Account'
+import { connect } from 'react-redux'
+import { getData } from '../../store/actions/cartsAction'
 
 class Carts extends React.Component {
     constructor(props) {
         super(props);
         this.state = {}
     }
+
+    componentWillMount() {
+        this.props.getData()
+    }
+
     render() {
         return (
             <div className={style.cart}>
@@ -20,7 +27,9 @@ class Carts extends React.Component {
             </div>
         )
     }
-
 }
 
-export default Carts;
+const mapDispatchToProps = dispatch => ({
+    getData: () => getData(dispatch)
+});
+export default connect(null, mapDispatchToProps)(Carts);
